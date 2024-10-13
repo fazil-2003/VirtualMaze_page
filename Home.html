@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCL_OMR_ROUTE_ACTIONS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function setActiveLink(event) {
+            const links = document.querySelectorAll('.navbar a');
+            links.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.navbar a');
+            links.forEach(link => link.addEventListener('click', setActiveLink));
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="info_container">
+            <div class="topcont">
+            <button class="circle-button">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="button-container">
+                <div class="button active">
+                    ACTIVE <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="button edit">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <div class="button delete">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+            </div>
+            <div class="header">
+            <div class="company-info">
+                <div class="Ellipse-3078">
+                    <div class="Image-34">
+                </div></div>
+                <h2>HCL_OMR</h2>
+            </div>
+            </div>
+            <div class="dashboard-stats">
+                <div class="card">
+                    <div class="value">30000 <span class="unit">Km</span></div>
+                    <div class="label">Total Distance</div>
+                </div>
+                <div class="card">
+                    <div class="value">302h 32m</div>
+                    <div class="label">Total Hours</div>
+                </div>
+                <div class="card">
+                    <div class="value">64</div>
+                    <div class="label">Total Office Trips</div>
+                </div>
+                <div class="card">
+                    <div class="value">₹15,00,000</div>
+                    <div class="label">Total Revenue</div>
+                </div>
+                <div class="card">
+                    <div class="value">4</div>
+                    <div class="label">Total Vendors</div>
+                </div>
+                <div class="card">
+                    <div class="value">40</div>
+                    <div class="label">Total Vehicles</div>
+                </div>
+                <div class="card">
+                    <div class="value">80</div>
+                    <div class="label">Total Drivers</div>
+                </div>
+                <div class="card">
+                    <div class="value">01 Jan 2023</div>
+                    <div class="label">Registered Date</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <a href="#">Overview</a>
+            <a href="#">Vendors</a>
+            <a href="#">Live Tracking</a>
+            <a href="#">Trips</a>
+            <a href="#">Vehicles</a>
+            <a href="#">Drivers</a>
+            <a href="#">Payments</a>
+            <a href="#">Fare Amount</a>
+            <a href="#">Employees</a>
+            <a href="#">Find Vendors</a>
+            <a href="#" class="active">Routes</a>
+        </div>
+        <div class="filter-container">
+            <div class="filters">
+                <select>
+                    <option>Date</option>
+                </select>
+                <select>
+                    <option>Trip Type</option>
+                </select>
+                <select>
+                    <option>Shift Time</option>
+                </select>
+                <select>
+                    <option>Office</option>
+                </select>
+                <button class="submit">Submit</button>
+            </div>
+            <div class="toggle-buttons">
+                <button class="active">Weekly</button>
+                <button>Instant Ride</button>
+                <button>Both</button>
+            </div>
+        </div>
+
+        <div class="cont">
+            <div class="left-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="d">
+                    <select>
+                        <option>All Zones</option>
+                    </select>
+                </div>
+                <div class="d">
+                    <select>
+                        <option>All Localities</option>
+                    </select>
+                </div>
+                <div class="d">
+                    <select>
+                        <option>All Groups</option>
+                    </select>
+                </div>
+            </div>
+            <div class="right-container" style="display: flex; align-items: center;">
+                <div class="d">
+                    <select>
+                        <option>25</option>
+                    </select>
+                </div>
+                <div class="action-box">
+                    <button><i class="fas fa-filter"></i></button>
+                    <button><i class="fas fa-file-alt"></i></button>
+                </div>
+                <div class="search-select-action">
+                    <select class="search-selectmovement">
+                        <option class="opt1search">Select/Search Action</option>
+                        <option class="opt1search">Routing Completed</option>
+                        <option class="opt1search">Replicate Route</option>
+                        <option class="opt1search">Allocate Vehicle</option>
+                        <option class="opt1search">Allocate Vendor</option>
+                        <option class="opt1search">Re-Route</option>
+                        <option class="opt1search">Re-Allocate Vehicle</option>
+                        <option class="opt1search">Re-Allocate Vendor</option>
+                        <option class="opt1search">Incremental Routing</option>
+                        <option class="opt1search">Update ETA</option>
+                        <option class="opt1search">Approve</option>
+                        <option class="opt1search">Start Trip</option>
+                        <option class="opt1search">Review Route</option>
+                        <option class="opt1search">Add Employee</option>
+                        <option class="opt1search">Mark No Show</option>
+                        <option class="opt1search">Unallocate Employee</option>
+                        <option class="opt1search">Unallocate No Show Employee</option>
+                        <option class="opt1search">Board Copy</option>
+                        <option class="opt1search">Vehicle Trip Sheet</option>
+                        <option class="opt1search">Allocate Trips to Fleet Vendor</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container5">
+            <div class="table5">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>SL NO</th>
+                            <th>EMP ID</th>
+                            <th>EMP NAME</th>
+                            <th>GENDER</th>
+                            <th>PICKUP LOCATION</th>
+                            <th>ETA</th>
+                            <th>LOCALITY</th>
+                            <th>OFFICE</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="10">
+                                <div class="cont6">
+                                <div class="trip-header5">
+                                    <div class="littlebadgy">
+                                        Trip ID : #ABCD12345
+                                    </div>
+                                    <div class="littlebadgy">
+                                        TN 01 AB 1234
+                                    </div>
+                                    <div class="littlebadgy">
+                                        Chennai - Alandur
+                                    </div>
+                                    <div class="littlebadgyfem">
+                                        <img src="img/group-32085.png"
+                                     srcset="img/group-32085@2x.png 2x,
+                                             img/group-32085@3x.png 3x"
+                                     class="Group-32085">
+                                        <span class="count">
+                                         2
+                                        </span>
+                                    </div>
+                                    <div class="littlebadgymale">
+                                        <img src="img/group-32086.png"
+                                        srcset="img/group-32086@2x.png 2x,
+                                                img/group-32086@3x.png 3x"
+                                        class="Group-32086">
+                                        <span class="count">
+                                         2
+                                        </span>
+                                    </div>
+                                    <div class="littlebadgyother">
+                                        <img src="img/group-32109.png"
+                                     srcset="img/group-32109@2x.png 2x,
+                                             img/group-32109@3x.png 3x"
+                                     class="Group-32109">
+                                        <span class="count">
+                                         0
+                                        </span>
+                                    </div>
+                                    <a class="tablebtns blue1" href="#">
+                                        <i class="fas fa-user-plus"></i>
+                                        Add Employee
+                                    </a>
+                                    <a class="tablebtns blue2" href="#">
+                                        <i class="fas fa-map"></i>
+                                        Route Map
+                                    </a>
+                                    <a class="tablebtns brown" href="#">
+                                        <i class="fas fa-history"></i>
+                                        Trip History
+                                    </a>
+                                </div>
+                                <div class="vbutton">
+                                    <a class="tablebtns yellow" href="#">
+                                        <i class="fas fa-taxi"></i>
+                                        Namma Ooru Taxi
+                                    </a>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td>1</td>
+                            <td>12345667</td>
+                            <td>Ezio Auditore</td>
+                            <td>Male</td>
+                            <td>No.1, Sample Street, Sample Area, Sample Locality, City, 600001</td>
+                            <td>8:00 AM</td>
+                            <td>Alandur</td>
+                            <td>Guindy</td>
+                            <td>
+                                <div class="action-icons5">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <i class="fas fa-arrow-down"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked></td>
+                            <td>2</td>
+                            <td>123151241</td>
+                            <td>Cassandra</td>
+                            <td>Female</td>
+                            <td>No.1, Sample Street, Sample Area, Sample Locality, City, 600001</td>
+                            <td>8:15 AM</td>
+                            <td>Alandur</td>
+                            <td>Guindy</td>
+                            <td>
+                                <div class="action-icons5">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <i class="fas fa-arrow-down"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                <div class="cont6">
+                                <div class="trip-header5">
+                                    <div class="littlebadgy">
+                                        Trip ID : #ABCD12345
+                                       </div>
+                                       <div class="littlebadgy">
+                                        TN 01 AB 1234
+                                       </div>
+                                       <div class="littlebadgy">
+                                        Chennai - Alandur
+                                       </div>
+                                       <div class="littlebadgyfem">
+                                        <img src="img/group-32085.png"
+                                     srcset="img/group-32085@2x.png 2x,
+                                             img/group-32085@3x.png 3x"
+                                     class="Group-32085">
+                                        <span class="count">
+                                         2
+                                        </span>
+                                    </div>
+                                    <div class="littlebadgymale">
+                                        <img src="img/group-32086.png"
+                                        srcset="img/group-32086@2x.png 2x,
+                                                img/group-32086@3x.png 3x"
+                                        class="Group-32086">
+                                        <span class="count">
+                                         2
+                                        </span>
+                                    </div>
+                                    <div class="littlebadgyother">
+                                        <img src="img/group-32109.png"
+                                     srcset="img/group-32109@2x.png 2x,
+                                             img/group-32109@3x.png 3x"
+                                     class="Group-32109">
+                                        <span class="count">
+                                         0
+                                        </span>
+                                    </div>
+                                    <a class="tablebtns1 blue" href="#">
+                                        <i class="fas fa-user-plus"></i>
+                                        Add Employee
+                                       </a>
+                                       <a class="tablebtns1 blue1" href="#">
+                                        <i class="fas fa-map"></i>
+                                        Route Map
+                                       </a>
+                                       <a class="tablebtns1 brown" href="#">
+                                        <i class="fas fa-history"></i>
+                                        Trip History
+                                       </a>
+                                </div>
+                                <div class="vbutton">
+                                    <a class="tablebtns1 yellow" href="#">
+                                        <i class="fas fa-taxi"></i>
+                                        Vendor Declined
+                                    </a>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>12345667</td>
+                            <td>Ezio Auditore</td>
+                            <td>Male</td>
+                            <td>No.1, Sample Street, Sample Area, Sample Locality, City, 600001</td>
+                            <td>8:00 AM</td>
+                            <td>Alandur</td>
+                            <td>Guindy</td>
+                            <td>
+                                <div class="action-icons5">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <i class="fas fa-arrow-down"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td>123151241</td>
+                            <td>Cassandra</td>
+                            <td>Female</td>
+                            <td>No.1, Sample Street, Sample Area, Sample Locality, City, 600001</td>
+                            <td>8:15 AM</td>
+                            <td>Alandur</td>
+                            <td>Guindy</td>
+                            <td>
+                                <div class="action-icons5">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <i class="fas fa-arrow-down"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                <div class="cont6">
+                                <div class="trip-header5">
+                                    <div class="littlebadgy">
+                                        Trip ID : #ABCD12345
+                                       </div>
+                                       <div class="littlebadgy">
+                                        TN 01 AB 1234
+                                       </div>
+                                       <div class="littlebadgy">
+                                        Chennai - Alandur
+                                       </div>
+                                       <div class="littlebadgyfem">
+                                        <img src="img/group-32085.png"
+                                     srcset="img/group-32085@2x.png 2x,
+                                             img/group-32085@3x.png 3x"
+                                     class="Group-32085">
+                                        <span class="count">
+                                         2
+                                        </span>
+                                    </div>
+                                    <div class="littlebadgymale">
+                                        <img src="img/group-32086.png"
+                                        srcset="img/group-32086@2x.png 2x,
+                                                img/group-32086@3x.png 3x"
+                                        class="Group-32086">
+                                        <span class="count">
+                                         2
+                                        </span>
+                                    </div>
+                                    <div class="littlebadgyother">
+                                        <img src="img/group-32109.png"
+                                     srcset="img/group-32109@2x.png 2x,
+                                             img/group-32109@3x.png 3x"
+                                     class="Group-32109">
+                                        <span class="count">
+                                         0
+                                        </span>
+                                    </div>
+                                       <a class="tablebtns1 blue" href="#">
+                                        <i class="fas fa-user-plus"></i>
+                                        Add Employee
+                                    </a>
+                                    <a class="tablebtns1 blue1" href="#">
+                                        <i class="fas fa-map"></i>
+                                        Route Map
+                                    </a>
+                                    <a class="tablebtns1 brown" href="#">
+                                        <i class="fas fa-history"></i>
+                                        Trip History
+                                    </a>
+                                </div>
+                                <div class="vbutton">
+                                    <a class="tablebtns1 yellow" href="#">
+                                        <i class="fas fa-taxi"></i>
+                                        Vendor Declined
+                                    </a>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>12345667</td>
+                            <td>Ezio Auditore</td>
+                            <td>Male</td>
+                            <td>No.1, Sample Street, Sample Area, Sample Locality, City, 600001</td>
+                            <td>8:00 AM</td>
+                            <td>Alandur</td>
+                            <td>Guindy</td>
+                            <td>
+                                
+                                <div class="action-icons5">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <i class="fas fa-arrow-down"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td>123151241</td>
+                            <td>Cassandra</td>
+                            <td>Female</td>
+                            <td>No.1, Sample Street, Sample Area, Sample Locality, City, 600001</td>
+                            <td>8:15 AM</td>
+                            <td>Alandur</td>
+                            <td>Guindy</td>
+                            <td>
+                                <div class="action-icons5">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <i class="fas fa-arrow-down"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
